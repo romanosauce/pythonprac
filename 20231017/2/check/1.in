@@ -1,0 +1,7 @@
+:awesome "You_are_awesome"
+awesome
+:awesome name "{}_-_You_are_awesome!".format(name)
+awesome "Hello, Tester!"
+:test_add a b c d a+b+c+d
+test_add True True 1 False
+quit "{:0<5}     {:+d}"

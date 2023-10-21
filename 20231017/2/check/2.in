@@ -1,0 +1,6 @@
+:concat a b (a+b)*3
+concat "True" "False"
+concat 1 2
+:do_smth list list[0]-list[1]
+do_smth [1, 2, 3, 4]
+quit "-{}+{}"

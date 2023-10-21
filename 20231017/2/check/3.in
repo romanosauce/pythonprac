@@ -1,0 +1,5 @@
+:alnb a b round(a**log(b))
+alnb e 12
+:tuple a b c (a,b,c)
+tuple [1,2,3] "aaa" (1,5,'aa')
+quit '{} WHAT!!! {}'
