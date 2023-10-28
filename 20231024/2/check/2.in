@@ -1,0 +1,4 @@
+import itertools as it
+
+seq = it.islice(slide(it.count(0), 5), 1001, 1014)
+print(*seq)
