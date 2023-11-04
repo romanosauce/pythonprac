@@ -1,0 +1,11 @@
+N = 4000
+test_list = [Maze(i % 11) for i in range(N)]
+print(test_list[1])
+t = test_list[4]
+print(t)
+t[2,0 : 2,3] = '\u2027'
+t[0,3 : 3,3] = '\u2027'
+print(t[0,3 : 2,0], t[0,0 : 3,3], t[3,0 : 3,0])
+t[0,0 : 0,3] = '\u2027'
+print(t[0,0 : 3,3])
+print(t)

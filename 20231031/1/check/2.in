@@ -1,0 +1,12 @@
+t1, t2, t3 = Omnibus(), Omnibus(), Omnibus()
+for i in range(100):
+    setattr(t1, f'a{i}', 10)
+    setattr(t2, f'a{i}', 'test')
+    setattr(t3, f'a{i}', hex)
+
+print(t1.a5, t2.a9, t3.a3)
+del t1.a0, t2.a0
+print(t3.a0, t1.a99)
+del t1.a99
+print(t3.a99)
+del t1.a1000

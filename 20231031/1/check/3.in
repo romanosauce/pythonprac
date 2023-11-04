@@ -1,0 +1,11 @@
+c1 = Omnibus()
+c1.k = c1.j = c1.k = 'it is just plain text without any meanings'
+print(c1.k)
+c2 = Omnibus()
+c2.k = 12345
+print(c1.k, c2.k)
+c3 = Omnibus()
+c3.j = c2.j = c1.j = bin
+print(c3.j)
+del c2.j, c1.j
+print(c3.j)

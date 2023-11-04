@@ -1,0 +1,11 @@
+a, b, c = Omnibus(), Omnibus(), Omnibus()
+
+a.i = 1
+a.i = 2
+b.i = b.j = b.aaa = 10
+b.b = 3
+print(a.i, b.j, b.aaa, b.b)
+del a.i
+print(b.i, b.j, b.b)
+del a.some_attr
+print(b.i)
