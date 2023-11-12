@@ -1,0 +1,4 @@
+s = DivStr() + DivStr('b') + DivStr('SqBeSaYWEHYAY!')
+print(*s.lower() // 6)
+print(s.upper() % 6)
+print(s.upper() % 6 + DivStr(s.lower() % 6))

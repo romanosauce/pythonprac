@@ -1,0 +1,5 @@
+a = DivStr('abc')
+print(*a // 7, sep='-')
+print(a % 4)
+print(*a[:] // 3, sep='/')
+print(DivStr() + a % 2)
