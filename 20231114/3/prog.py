@@ -46,3 +46,7 @@ class AlphaQ:
             return res[:-2]
         else:
             return res
+
+
+import sys
+exec(sys.stdin.read())
