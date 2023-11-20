@@ -26,7 +26,7 @@ class AlphaQ:
             setattr(self, key, kwargs[key])
 
     def __setattr__(self, name, value):
-        if name not in lowercase:
+        if name not in lowercase or len(name) != 1:
             raise AttributeError
         self.__dict__[name] = value
 
