@@ -1,0 +1,27 @@
+class seq_emul():
+    def __init__(self, a):
+        self.a = a
+
+    def __len__(self):
+        return self.a
+
+    def __str__(self):
+        return 'this is sequence emulator class'
+
+class Unstorable():
+    pass
+
+class Test1:
+    num1 = Num()
+    num2 = Num()
+
+class Test2:
+    another_num = Num()
+
+t1 = Test1()
+t1.num1 = seq_emul(10)
+t2 = Test2()
+t2.another_num = Unstorable()
+print(t1.num1 + t1.num2 + t2.another_num)
+t2.another_num = seq_emul(20)
+print(t2.another_num + t1.num2)

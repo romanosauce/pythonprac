@@ -1,0 +1,16 @@
+class seq_num_emul:
+    real = 0
+    def __init__(self, a):
+        self.a = a
+    def __len__(self):
+        return 10
+
+    def __add__(self, obj):
+        return self.a + obj.a
+
+class test:
+    num = Num()
+
+print(test.num)
+test.num = seq_num_emul(10)
+print(test.num + seq_num_emul(20))

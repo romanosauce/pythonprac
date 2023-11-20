@@ -1,0 +1,23 @@
+@objcount
+class C1:
+    def __init__(self):
+        print('this is the init of C1')
+
+    def __del__(self):
+        print('delete me, my master')
+
+class C2(C1):
+    pass
+
+c1 = C2()
+print(c1.counter)
+c11 = C1()
+print(c1.counter)
+c21 = C2()
+print(c21.counter)
+print(c1.counter)
+print(C2.counter)
+print(C1.counter)
+del c1
+del c21
+del c11

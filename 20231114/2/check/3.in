@@ -1,0 +1,21 @@
+class C1:
+    unreal = 0
+    def __init__(self, a):
+        self.unreal = a
+
+class C2(C1):
+    def __str__(self):
+        self.real = 10
+        return 'now it contains real'
+
+class Test:
+    num = Num()
+
+t = Test()
+print(t.num)
+c = C2('a')
+t.num = c
+print(t.num)
+print(c)
+t.num = c
+print(t.num.real)
