@@ -1,0 +1,40 @@
+from timeit import timeit
+from itertools import product
+
+lowercase = 'abcdefghijklmnopqrstuvwxyz'
+a = Alpha()
+b = AlphaQ()
+
+slots_time = timeit('''
+err_count_slots = 0
+for elem in product(lowercase, repeat=2):
+    try:
+        setattr(a, ''.join(elem), elem)
+    except AttributeError:
+        err_count_slots += 1
+if err_count_slots != 26 * 26:
+    raise Exception
+
+alp = [Alpha() for i in range(11)]
+for i in range(100000):
+    setattr(alp[i % 11], lowercase[i % 26], 'EEEE')
+    getattr(alp[i % 11], lowercase[i % 26])
+''', number=10, globals = globals())
+
+no_slots_time = timeit('''
+err_count_no_slots = 0
+for elem in product(lowercase, repeat=2):
+    try:
+        setattr(b, ''.join(elem), elem)
+    except AttributeError:
+        err_count_no_slots += 1
+if err_count_no_slots != 26 * 26:
+    raise Exception
+
+alp = [AlphaQ() for i in range(11)]
+for i in range(100000):
+    setattr(alp[i % 11], lowercase[i % 26], 'EEEE')
+    getattr(alp[i % 11], lowercase[i % 26])
+''', number=10, globals = globals())
+
+print(slots_time < no_slots_time)

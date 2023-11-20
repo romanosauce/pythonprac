@@ -1,0 +1,26 @@
+cls_slots = Alpha(b=1, x=3, e=4)
+
+try:
+    Alpha(aaaa=1)
+except Exception:
+    print('NO AHAHA')
+
+cls_no_slots = Alpha(b=4, e=10, d=5)
+
+try:
+    cls_slots.eee = 1
+except AttributeError:
+    print('NO SUCH FIELD')
+
+try:
+    cls_no_slots.ljk = 5
+except AttributeError:
+    print('OMG, YOU ARE GOOD AT PROGRAMMING')
+
+cls_slots.a = 10
+cls_slots.b = 3
+print(cls_slots.e)
+print(cls_slots)
+
+cls_no_slots.f = 5
+print(cls_no_slots)

@@ -1,0 +1,22 @@
+from timeit import timeit
+
+lowercase = 'abcdefghijklmnopqrstuvwxyz'
+time_for_slots = timeit('''
+a = Alpha()
+for i in range(100000):
+    setattr(a, lowercase[i % 26], str(i))
+
+for i in range(100000):
+    getattr(a, lowercase[i % 26])
+''', number=10, globals=globals())
+
+time_for_no_slots = timeit('''
+b = AlphaQ()
+for i in range(100000):
+    setattr(b, lowercase[i % 26], str(i))
+
+for i in range(100000):
+    getattr(b, lowercase[i % 26])
+''', number=10, globals=globals())
+
+print(time_for_slots < time_for_no_slots)
