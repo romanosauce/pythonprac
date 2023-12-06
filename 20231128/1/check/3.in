@@ -1,0 +1,12 @@
+class C(metaclass=dump):
+    def __init__(self, abcd, efgh, ggg):
+        self.ggg = ggg
+
+    def get_ggg(self, *, keyword_only=None):
+        print('Are you really want to get ggg?')
+        return self.ggg
+
+
+c = C(True, efgh=False, ggg='Please, give my value to somebody')
+print(c.get_ggg())
+print(c.get_ggg(keyword_only='Hell Yeah!'))

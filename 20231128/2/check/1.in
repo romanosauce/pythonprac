@@ -1,0 +1,11 @@
+out a out a
+label_on_comment:
+    it should be considered as a comment
+    or not
+
+    store 1.1 a
+    store 1.2 A
+    ifge a A label_on_comment
+        out C
+        out a
+        out A

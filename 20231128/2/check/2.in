@@ -1,0 +1,7 @@
+label
+    but actually it is not a label but comment
+    so
+    store 1 a
+    store 2 b
+    ifge a b label
+    out b

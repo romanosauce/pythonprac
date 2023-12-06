@@ -1,0 +1,7 @@
+__init__: (True,), {'efgh': False, 'ggg': 'Please, give my value to somebody'}
+get_ggg: (), {}
+Are you really want to get ggg?
+Please, give my value to somebody
+get_ggg: (), {'keyword_only': 'Hell Yeah!'}
+Are you really want to get ggg?
+Please, give my value to somebody

@@ -1,0 +1,15 @@
+correct version that changed EVERYTHING
+
+let's compute sum
+    store 50 i
+    store 0.5 b
+    mul i b c
+    out c
+    div c b d
+    out d
+    add ghg c k
+    store 25.0 another_k
+    ifeq k another_k ghghg
+    out c
+    ghghg:
+        out k

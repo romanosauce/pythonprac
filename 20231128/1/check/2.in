@@ -1,0 +1,7 @@
+class C(metaclass=dump):
+    def some_method(self, in_val, /, key_arg, *, new_key_arg):
+        print('do_something')
+
+c = C()
+c.some_method(10, 0, new_key_arg='abc')
+c == 2

@@ -1,0 +1,2 @@
+some_method: (10,), {'key_arg': 0, 'new_key_arg': 'abc'}
+do_something
