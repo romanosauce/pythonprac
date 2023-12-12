@@ -1,0 +1,12 @@
+import random
+import itertools
+
+async def main(A):
+    tasks, B = await mtasks(A)
+    random.shuffle(tasks)
+    await asyncio.gather(*tasks)
+    return B
+
+A = [''.join(i) for i in itertools.permutations('abcd', 4)]
+B = asyncio.run(main(A))
+print(B == sorted(A))
